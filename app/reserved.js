@@ -18,31 +18,8 @@ export default async function Home() {
   return (
     <main>
     <div className='row'>
-    <h4 className='m-3 text-center text-success'>The NewsGanger | The Home of Authentic News</h4>
-    <hr></hr>
-     <div className='col-sm-3 left-side-bar d-none d-sm-block'>
-
-     <Image width ={270} height = {200} className ="news-img" src="/img/newslogo.png" alt="" /> 
-     <Image width ={270} height = {200} className ="news-img" src="/img/music.jpg" alt="" />
-     <Image width ={270} height = {200} className ="news-img" src="/img/ent.jpg" alt="" />
-     <Image width ={270} height = {200} className ="news-img" src="/img/ecoPol.png" alt="" />
-     <div className='src d-inline'>
-     <h5>News Source</h5>
-     <hr></hr>
-     <button className='btn btn-secondary  m-1'>CNA</button>
-     <button className='btn btn-secondary m-1'>Asia Times</button>
-     <button className='btn btn-secondary m-1'>Bloomberg</button>
-     <button className='btn btn-secondary m-1'>Reuters</button>
-     <button className='btn btn-secondary m-1'>The New York Times</button>
-     <button className='btn btn-secondary m-1'>The Register</button>
-     <button className='btn btn-secondary m-1'>Investing.com</button>
-     <button className='btn btn-secondary m-1'>WSJ</button>
-     <button className='btn btn-secondary m-1'>nikkei</button>
-     
-     
-
-     </div>
-
+     <div className='col-sm-3 left-side-bar'>
+     <Image width ={270} height = {200} className ="news-img" src="/img/music.jpg" alt="" />)
      </div>
      <div className='main-news row col-sm-9 mt-4'>
        
@@ -103,7 +80,7 @@ export default async function Home() {
           && (<Image width ={180} height = {200} className ="news-img" src="/img/logo.png" alt="" />)}
 
           <p>
-        <button  className='btn btn-secondary'> {aNews.topic_class}</button>
+        <button className='btn btn-secondary'> {aNews.topic_class}</button>
         </p>
         
          </div>
@@ -136,7 +113,6 @@ export default async function Home() {
        <button className='btn btn-secondary m-1'> {aNews.news_sources[3]}</button> 
        <button className='btn btn-secondary m-1'> {aNews.news_sources[4]}</button> 
        <button className='btn btn-secondary m-1'> {aNews.news_sources[5]}</button> 
-       <button className='btn btn-secondary m-1'> {aNews.news_sources[6]}</button> 
        
       
         </div>
