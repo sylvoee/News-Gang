@@ -1,6 +1,6 @@
 import Image from 'next/image'
 let getNews = async () =>{
-    const URL = 'https://api.markets.sh/api/v1/clusters?api_token=9fc62041fb5d215f01f27aafbfca747a';
+    const URL = process.env.URL;
     let data = await fetch(URL, {next :{revalidate:3600}});
     let res = await data.json();
     // console.log(res); 
@@ -17,10 +17,10 @@ export default async function Home() {
     let news = await getNews();
   return (
     <main>
-    <div className='row'>
+    <div className='row main'>
     <h4 className='m-3 text-center text-success'>The NewsGanger | The Home of Authentic News</h4>
     <hr></hr>
-     <div className='col-sm-3 left-side-bar d-none d-sm-block'>
+     <div className='col-sm-3 left-side-bar d-none d-sm-block shadow'>
 
      <Image width ={270} height = {200} className ="news-img" src="/img/newslogo.png" alt="" /> 
      <Image width ={270} height = {200} className ="news-img" src="/img/music.jpg" alt="" />
