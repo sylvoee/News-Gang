@@ -50,7 +50,7 @@ export default async function Home() {
         news.map(aNews =>{
         return(
           <div className='col-sm-4' key={aNews.cluster_uuid}>
-          <div type="button" className=" col-sm-12 m-1 btn btn-light shadow" data-bs-toggle="modal" data-bs-target="#myModal">
+          <div type="button" className=" col-sm-12 m-1 btn btn-light shadow" data-bs-toggle="modal" data-bs-target={'#myModal' + aNews.cluster_uuid }>
          <div>
         <p>{aNews.description}</p>
        
@@ -111,7 +111,7 @@ export default async function Home() {
 </div>
 
 {/* <!-- The Modal --> */}
-<div className="modal" id="myModal">
+<div className="modal" id={'myModal' + aNews.cluster_uuid }>
   <div className="modal-dialog">
     <div className="modal-content">
 
